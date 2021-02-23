@@ -77,7 +77,7 @@
                       </label>
                 </div>
                 <div class="col-md-12 text-center p-5">
-                  <button class="btn btn-success">Subir Fotos</button>
+                  <button class="btn btn-success">Subir Imagen</button>
                 </div>
               </div>  
           </form>
