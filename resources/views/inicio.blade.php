@@ -45,14 +45,6 @@
 
 <div class="container top">
 
-@if ( session('mensaje') )
-    <div class="alert bg-green alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span></button>
-          {{ session('mensaje') }}
-    </div>
-@endif
-
 <h3 class="text-center mt-5">
     <br> Como Subir Imagen usando 
     <span style="color: #ff2d20;">
@@ -76,12 +68,12 @@
   <div class="body">
       <div class="row clearfix">
         <div class="col-sm-6">
-        <form method="POST" action="{{ route('subirImg') }}" class="login-form" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('guardarImgTwo') }}" class="login-form" enctype="multipart/form-data">
             @csrf
               <div class="row">
                 <div class="col-md-12">
                       <label class="dropimage miniprofile">
-                        <input title="Hacer Click aqui" type="file" name="nombreImg" required="true">
+                        <input title="Hacer Click aqui" type="file" name="nombreImg" accept="image/*" required="true">
                       </label>
                 </div>
                 <div class="col-md-12 text-center p-5">
@@ -117,17 +109,6 @@
 <!--- Notificacion en Bootstrap --->
 <script src="{{ asset('js/Lobibox.js') }}"></script>
 <script src="{{ asset('js/notification-active.js') }}"></script>
-
-@if (session('mensaje'))
-<script type="text/javascript">
-  Lobibox.notify('success', {
-      position: 'Felicitaciones',
-      msg: 'Imagen Registrada Correctamente...'
-  });
-</script>
-@endif
-
-
 
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function() {

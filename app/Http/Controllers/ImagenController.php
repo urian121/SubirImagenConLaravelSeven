@@ -35,9 +35,7 @@ public function guardarImg(Request $request){
 
 
         $imagenes = imagen::all(); 
-        $mensaje  ="Foto Registrada Correctamente..!";
-        //return view('inicio', compact('imagenes','mensaje'));
-        return view('inicio')->with('imagenes',$imagenes)->with('mensaje',$mensaje);
+        return view('inicio', compact('imagenes'));
     }
 
 
@@ -56,9 +54,8 @@ public function guardarImgTwo(Request $request){
         $DataImg->save();
 
         $imagenes = imagen::all(); 
-        $mensaje  ="Foto Registrada Correctamente..!";
 
-        return view('inicio')->with('imagenes',$imagenes)->with('mensaje',$mensaje);
+        return view('inicio')->with('imagenes',$imagenes);
     }
 
    
